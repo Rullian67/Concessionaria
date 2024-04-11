@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.mycompany.concessionaria2">
+  <ClassDiagramComponents>
+    <Class name="Carro" package="com.mycompany.concessionaria2" visibility="public" xPosition="40.0" yPosition="47.0">
+      <Fields>
+        <Field name="quantidadeDeCV" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Marca" name="marca"/>
+          <Argument type="String" name="modelo"/>
+          <Argument type="int" name="quantidadeDeCV"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="quantidadeDeCV" returnType="int" visibility="public"/>
+        <Method name="quantidadeDeCV" returnType="void" visibility="public">
+          <Argument type="int" name="quantidadeDeCV"/>
+        </Method>
+        <Method name="calcularPreco" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Cliente" package="com.mycompany.concessionaria2" visibility="public" xPosition="665.0" yPosition="440.0">
+      <Fields>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="cpf" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="cpf"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getCpf" returnType="String" visibility="public"/>
+        <Method name="setCpf" returnType="void" visibility="public">
+          <Argument type="String" name="cpf"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Concessionaria2" package="com.mycompany.concessionaria2" visibility="public" xPosition="840.0" yPosition="81.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Financeiro" package="com.mycompany.concessionaria2" visibility="public" xPosition="653.0" yPosition="697.0">
+      <Fields>
+        <Field name="vendas" type="List&lt;Venda&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="registrarVenda" returnType="void" visibility="public">
+          <Argument type="Venda" name="venda"/>
+        </Method>
+        <Method name="imprimirVendas" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Marca" package="com.mycompany.concessionaria2" visibility="public" xPosition="1134.0" yPosition="20.0">
+      <Fields>
+        <Field name="nome" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nome"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Moto" package="com.mycompany.concessionaria2" visibility="public" xPosition="1388.0" yPosition="1.0">
+      <Fields>
+        <Field name="cilindradas" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Marca" name="marca"/>
+          <Argument type="String" name="modelo"/>
+          <Argument type="int" name="cilindradas"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCilindradas" returnType="int" visibility="public"/>
+        <Method name="setCilindradas" returnType="void" visibility="public">
+          <Argument type="int" name="cilindradas"/>
+        </Method>
+        <Method name="calcularPreco" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Veiculo" package="com.mycompany.concessionaria2" visibility="public" isAbstract="true" xPosition="1370.0" yPosition="569.0">
+      <Fields>
+        <Field name="marca" type="Marca" visibility="private"/>
+        <Field name="modelo" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Marca" name="marca"/>
+          <Argument type="String" name="modelo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMarca" returnType="Marca" visibility="public"/>
+        <Method name="setMarca" returnType="void" visibility="public">
+          <Argument type="Marca" name="marca"/>
+        </Method>
+        <Method name="getModelo" returnType="String" visibility="public"/>
+        <Method name="setModelo" returnType="void" visibility="public">
+          <Argument type="String" name="modelo"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="calcularPreco" returnType="double" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="Venda" package="com.mycompany.concessionaria2" visibility="public" xPosition="20.0" yPosition="515.0">
+      <Fields>
+        <Field name="cliente" type="Cliente" visibility="private"/>
+        <Field name="item" type="Compravel" visibility="private"/>
+        <Field name="valor" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+          <Argument type="Compravel" name="item"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCliente" returnType="Cliente" visibility="public"/>
+        <Method name="setCliente" returnType="void" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="getItem" returnType="Compravel" visibility="public"/>
+        <Method name="setItem" returnType="void" visibility="public">
+          <Argument type="Compravel" name="item"/>
+        </Method>
+        <Method name="getValor" returnType="double" visibility="public"/>
+        <Method name="setValor" returnType="void" visibility="public">
+          <Argument type="double" name="valor"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Compravel" package="com.mycompany.concessionaria2" visibility="public" xPosition="519.0" yPosition="64.0">
+      <Methods>
+        <Method name="calcularPreco" returnType="double" visibility="package"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="cliente" source="com.mycompany.concessionaria2.Venda" target="com.mycompany.concessionaria2.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="item" source="com.mycompany.concessionaria2.Venda" target="com.mycompany.concessionaria2.Compravel" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.mycompany.concessionaria2.Financeiro" target="com.mycompany.concessionaria2.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vendas" source="com.mycompany.concessionaria2.Financeiro" target="com.mycompany.concessionaria2.Venda" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Venda&gt;"/>
+    <IsRelation name="is" source="com.mycompany.concessionaria2.Moto" target="com.mycompany.concessionaria2.Veiculo"/>
+    <HasRelation name="marca" source="com.mycompany.concessionaria2.Veiculo" target="com.mycompany.concessionaria2.Marca" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.mycompany.concessionaria2.Venda" target="com.mycompany.concessionaria2.Compravel" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.mycompany.concessionaria2.Venda" target="com.mycompany.concessionaria2.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.mycompany.concessionaria2.Veiculo" target="com.mycompany.concessionaria2.Marca" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.mycompany.concessionaria2.Veiculo" target="com.mycompany.concessionaria2.Compravel"/>
+    <IsRelation name="is" source="com.mycompany.concessionaria2.Carro" target="com.mycompany.concessionaria2.Veiculo"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
